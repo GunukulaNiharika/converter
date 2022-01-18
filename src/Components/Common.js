@@ -12,9 +12,17 @@ const Common = (props) =>{
     const [To, setTo] = useState(0);
     const [options, setOptions] = useState([]);
     const [Answer, setAnswer] = useState("");
-
+    const name= props.location.state;
     useEffect(() => {
-        const [list, symbol] = props.fetchData();
+        // const [list, symbol] = props.fetchData();
+        
+       
+            var list=[], symbol=[];
+            convert().list(name).map((mass => {
+               list.push(mass.singular);
+               symbol.push(mass.abbr);
+            }))
+    
         setOptions(list);
         setInfo(symbol);
     },[])
