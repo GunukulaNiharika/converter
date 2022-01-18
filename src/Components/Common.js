@@ -41,7 +41,7 @@ const Common = (props) =>{
 
     return(
         <>  
-        <h1 id="head">{`${props.name} Converter`}</h1>
+        <h1 id="head">{`${name} Converter`}</h1>
 
         <Card className='center-card card'>
             <Form >
