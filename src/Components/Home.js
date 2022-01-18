@@ -11,11 +11,13 @@ const Home = (props) => {
             <h3 id='caption'>What do you want to convert?</h3>
             <div >
                 <Row >
+                <Col  xs={12} className='center'><Link to='/currency'><Button variant='outline-warning' className='button'>Currency</Button></Link></Col>
                     {
                         measures.map((unit)=>(
                             <Col key={unit} xs={12} className='center'><Link to={{pathname:'/common', state:unit}}><Button variant='outline-warning' className='button'>{unit}</Button></Link></Col>
                         ))
                     }
+                    
                 </Row>
 
             </div>
